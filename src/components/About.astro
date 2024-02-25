@@ -4,37 +4,38 @@
 <section
 	data-testid="about"
 	id="about"
-	class="mb-10 flex flex-col items-center justify-center lg:mb-0 lg:h-screen lg:flex-row"
+	class="container mb-10 flex flex-col items-center justify-center lg:mb-0 lg:h-screen lg:flex-row"
 >
 	<div class="mb-10 flex w-full flex-col items-center justify-center lg:mb-0 lg:w-1/2">
 		<h2 class="font-monospace text-2xl text-orange lg:text-4xl">About me</h2>
 		<span class="mb-6 ml-2 h-1 w-10 bg-orange"></span>
 	</div>
 
-	<div class="w-full text-justify text-black dark:text-white lg:w-1/2 flex flex-col gap-4">
+	<div class="flex w-full flex-col gap-4 text-justify text-black dark:text-white lg:w-1/2">
 		<p class="mb-2">
-			Being curious by nature, I have experience in different fields. Having a background in Law and
-			having worked in the financial sector, some years ago I decided to immerse myself in the world
-			of web development as a front-end programmer as it provided me with a creative outlet while
-			working in a competitive environment. While I enjoyed my stay as a front-end, I felt that I
-			was disconnected from the reality of the final user, and since I am a very people-oriented
-			person I felt that dedicating myself to just the engineering facet of web development did not
-			allow me to release my full potential.
+			Being curious by nature, I have found in Product Design a place that invites me to want to help positive transformation happen. This is why it is important to me to participate in thrilling projects, where I can make things brighter through my hands-on contribution, and where these projects are aligned with my values. 
 		</p>
 
-		<p>Recently, I have found in UX Design a place that invites me to want to help positive transformation
-			happen. This is why it is important to me to participate in thrilling projects where I can make things
-			brighter through my hands-on contribution, using my abilities and adding value with my ideas and experience,
-			and where these projects are aligned with my values.</p>
-		
 		<p>
-			I enjoy all parts of the design process, however, the ones I enjoy the most are UX
-			research and prototyping, as well the UX writing as I have a genuine interest in storytelling and
+			I enjoy all parts of the design process, however, the ones I enjoy the most are UX research
+			and prototyping, as well the UX writing as I have a genuine interest in storytelling and
 			writing.
-
 		</p>
-
-
-
-
+	</div>
 </section>
+
+<style>
+  .container {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(25%);
+    transition: all 1s;
+  }
+
+  .container.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+
+</style>

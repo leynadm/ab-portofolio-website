@@ -1,8 +1,8 @@
 ---
 inProgress: false
-title: Landing in Barcelona to stay
-description: Immigration presents a complex challenge in today's global landscape, often perceived as a problem without a clear solution. This description explores the multifaceted nature of immigration, highlighting the search for humane and effective responses to the needs of migrants, the societies they enter, and the underlying causes of migration. It underscores the importance of dialogue, policy, and compassion in addressing this contentious issue.
+title: Landing in Barcelona
+description: Tackling the significant challenges faced by migrants arriving in Barcelona, particularly the daunting task of navigating bureaucratic paperwork. Our goal was to identify the core issues these individuals encounter and devise practical solutions to simplify the process, enhancing their settlement experience.
 link: https://medium.com/@adrianabiarnes/case-study-landing-in-barcelona-to-stay-a8f01ee35eb4
-tags: ['React', 'CSS', 'Typescript']
-src: https://miro.medium.com/v2/resize:fit:720/format:webp/1*z4ltDeX0OMG70FBfZF2Gpw.jpeg
+tags: ['UX Research', 'Wireframing', 'Concept Testing','User Testing']
+src: https://firebasestorage.googleapis.com/v0/b/matei-daniel-website.appspot.com/o/adriana-biarnes-website%2Fproject-4-update.webp?alt=media&token=2405dc0e-45b7-42b7-8c48-55598892b36b
 ---

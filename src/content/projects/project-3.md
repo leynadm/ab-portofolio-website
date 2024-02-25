@@ -1,9 +1,9 @@
 ---
 inProgress: false
-title: Rethinking an E-commerce app
-description: The project aims to revamp a local e-commerce platform, enhancing its usability and interface design. By engaging with stakeholders and conducting benchmarking and market research, the goal is to understand the user journey better and implement improvements that make the shopping experience more intuitive and enjoyable, thereby increasing user satisfaction and loyalty.
+title: Furtivo
+description: We conducted an in-depth analysis of a skateboarding-centric e-commerce platform, aiming to identify user experience obstacles. Our objective is to redesign the site to streamline navigation, making it effortless for customers to explore and securely purchase their desired skateboarding products.
 img_alt: project image alt text
 link: https://medium.com/@adrianabiarnes/case-study-rethinking-an-e-commerce-4861d2347561
-tags: ['React', 'CSS', 'Typescript']
-src: https://miro.medium.com/v2/resize:fit:720/format:webp/1*48jKCxcwqKWRCTaVIOtMaA.jpeg
+tags: ['UX Research','Information Architecture', 'Prototyping', 'User texting']
+src: https://firebasestorage.googleapis.com/v0/b/matei-daniel-website.appspot.com/o/adriana-biarnes-website%2Fproject-3-update.webp?alt=media&token=1b6d5477-7d5b-458a-aa18-1bed0efc65fa
 ---

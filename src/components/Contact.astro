@@ -6,7 +6,7 @@ import Social from '@components/ui/Social.astro';
 <section
 	data-testid="contact"
 	id="contact"
-	class="flex flex-col flex-wrap items-center justify-center gap-8 text-black dark:text-white lg:mb-0 lg:h-screen"
+	class="container flex flex-col flex-wrap items-center justify-center gap-8 text-black dark:text-white lg:mb-0 lg:h-screen"
 >
 	<Button size={'lg'} style={'primary'} name="Contact">Say hello!</Button>
 	<hr class="w-1/2" />
@@ -14,3 +14,19 @@ import Social from '@components/ui/Social.astro';
 		<Social />
 	</div>
 </section>
+
+<style>
+.container {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(25%);
+    transition: all 1s;
+  }
+
+  .container.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+
+</style>

@@ -26,13 +26,14 @@ const menuitems = [
 <header data-testId="header" class="my-5 flex flex-col items-center justify-between lg:flex-row">
 	<Astronav>
 		<div class="flex w-full items-center justify-between lg:w-auto">
-<!-- 			<Button size={'sm'} name="Download CV">Download CV</Button>
- -->			<div class="block lg:hidden">
+			<!-- 			<Button size={'sm'} name="Download CV">Download CV</Button>
+ -->
+			<div class="block lg:hidden ml-auto">
 				<MenuIcon class="h-4 w-4 text-black dark:text-white" />
 			</div>
 		</div>
-		<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
-			<ul class="flex flex-col lg:flex-row lg:gap-3">
+		<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto ">
+			<ul class="flex flex-col lg:flex-row lg:gap-3 ml-auto">
 				{
 					menuitems.map((item) => (
 						<>
@@ -40,7 +41,7 @@ const menuitems = [
 								<a
 									aria-label="navigation link"
 									href={item.path}
-									class="flex py-2 text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3"
+									class="flex py-3 text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3 justify-around font-bold font-mono"
 								>
 									{item.title}
 								</a>
@@ -48,7 +49,7 @@ const menuitems = [
 						</>
 					))
 				}
-				<li><ToggleTheme /></li>
+				<li class="flex justify-around"><ToggleTheme /></li>
 			</ul>
 		</MenuItems>
 	</Astronav>

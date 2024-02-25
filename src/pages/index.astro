@@ -19,3 +19,20 @@ import Layout from '@layouts/Layout.astro';
 		<BackToTop />
 	</main>
 </Layout>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+
+  const sectionElements = document.querySelectorAll(".container");
+  sectionElements.forEach((el) => observer.observe(el));
+
+</script>

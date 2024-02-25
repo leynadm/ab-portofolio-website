@@ -1,27 +1,74 @@
 ---
-import heroImage from '@assets/images/hero.png';
-import { Image } from '@astrojs/image/components';
 import Button from '@components/ui/Button.astro';
 ---
 
 <section
 	data-testid="hero"
-	class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
+	class="flex h-screen flex-col-reverse items-center justify-center text-center opacity-100 lg:flex-row"
 >
 	<div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
-		<div>
-			<h1 class="mb-10 font-monospace text-4xl text-black dark:text-white lg:text-5xl">
+		<div class="typewriter">
+			<h1
+				class="mb-10 bg-black p-2 font-monospace text-4xl text-white dark:bg-white dark:text-black lg:text-5xl"
+			>
 				Adriana <span class="text-orange">Biarnes</span>
 			</h1>
-			<h2 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
-				UI/UX <span class="text-orange">designer</span>
+			<h2 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl" rounded-md>
+				UI/UX designer
 			</h2>
 		</div>
-		<div class="mb-10">
-			<Button style={'primary'} size={'lg'} class={'flex'} name="learn more"		
-			><a
-			href="#about"
-			>Learn More</a></Button>
+		<div class="see-more">
+			<Button size={'lg'} class={'flex'} name="learn more">
+				<a href="#about">Learn More</a>
+			</Button>
 		</div>
 	</div>
 </section>
+<div class="bg-light-mode background dark:hidden"></div>
+<!-- Shown in light mode -->
+<div class="bg-dark-mode background hidden dark:block"></div>
+<!-- Shown in dark mode -->
+
+<style>
+	/* Custom CSS for light mode background */
+	.bg-light-mode {
+		background-image: url('../assets/images/background-day.webp');
+	}
+	/* Custom CSS for dark mode background */
+	.bg-dark-mode {
+		background-image: url('../assets/images/background-night.webp');
+	}
+	/* Common styles for both backgrounds */
+	.background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+		mask-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5) 5%, #000 100%);
+	}
+
+	@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.typewriter h1 {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.typewriter h2 {
+    opacity: 0; /* Start with h2 hidden */
+    animation: fadeIn 1s ease-out 1s forwards; /* Starts after h1 animation */
+}
+
+
+</style>

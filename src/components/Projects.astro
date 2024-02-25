@@ -10,7 +10,7 @@ const projects = await getCollection('projects', ({ data }) => {
 <section
 	data-testid="projects"
 	id="projects"
-	class="mb-10 flex flex-col items-center justify-center md:mb-0 md:h-screen"
+	class="container mb-10 flex flex-col items-center justify-center md:mb-0 "
 >
 	<h2 class="font-monospace text-2xl text-orange lg:text-4xl">Projects</h2>
 	<span class="mb-10 h-1 w-10 bg-orange"></span>
@@ -51,3 +51,19 @@ const projects = await getCollection('projects', ({ data }) => {
 		</svg>
 	</a>
 </section>
+
+<style>
+.container {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(25%);
+    transition: all 1s;
+  }
+
+  .container.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+
+</style>
