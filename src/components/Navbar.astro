@@ -23,16 +23,16 @@ const menuitems = [
 ];
 ---
 
-<header data-testId="header" class="my-5 flex flex-col items-center justify-between lg:flex-row">
+<header data-testId="header" class="my-5  flex flex-col items-center justify-between lg:flex-row ">
 	<Astronav>
-		<div class="flex w-full items-center justify-between lg:w-auto">
+		<div class="flex w-full items-center justify-between lg:w-auto " >
 			<!-- 			<Button size={'sm'} name="Download CV">Download CV</Button>
  -->
 			<div class="block lg:hidden ml-auto">
-				<MenuIcon class="h-6 w-6 text-black dark:text-white menu-toggle" />
+				<MenuIcon class="h-6 w-6 text-black dark:text-white" />
 			</div>
 		</div>
-		<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto menu-enter navbarMenu">
+		<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
 			<ul class="flex flex-col lg:flex-row lg:gap-3 ml-auto">
 				{
 					menuitems.map((item) => (
@@ -54,46 +54,26 @@ const menuitems = [
 		</MenuItems>
 	</Astronav>
 </header>
-<!-- <script>
-	document.addEventListener('DOMContentLoaded', function() {
-	  const menuToggle = document.querySelector('.menu-toggle');
-	  const menu = document.querySelector('.navbarMenu');
-  
-	  menuToggle.addEventListener('click', function() {
-		const isOpen = menu.classList.contains('fade-in');
-  
-		if (isOpen) {
-		  menu.classList.remove('fade-in');
-		  menu.classList.add('fade-out');
-		  setTimeout(() => menu.classList.add('hidden'), 1000); // Ensure this matches the duration of your fade-out animation
-		} else {
-		  menu.classList.remove('hidden');
-		  menu.classList.remove('fade-out');
-		  menu.classList.add('fade-in');
-		}
-	  });
-	});
-  </script> -->
 
   <style>
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.navbarMenu {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateY(-100%); /* Start hidden above */
+  opacity: 0; /* Start transparent */
+  display: block; /* Ensure it's always block but can be invisible */
 }
 
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+/* Control visibility with classes */
+.navbarMenu.show {
+  transform: translateY(0); /* Slide down */
+  opacity: 1; /* Fade to visible */
 }
 
-/* Animation classes */
-.fade-in {
-  animation: fadeIn 1s ease forwards;
-}
-
-.fade-out {
-  animation: fadeOut 1s ease forwards;
+.navbarMenu.hide {
+  transform: translateY(-100%); /* Slide up */
+  opacity: 0; /* Fade to invisible */
+  pointer-events: none; /* Prevent interaction when hidden */
 }
 
   </style>
