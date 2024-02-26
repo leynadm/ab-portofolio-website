@@ -29,10 +29,10 @@ const menuitems = [
 			<!-- 			<Button size={'sm'} name="Download CV">Download CV</Button>
  -->
 			<div class="block lg:hidden ml-auto">
-				<MenuIcon class="h-6 w-6 text-black dark:text-white" />
+				<MenuIcon class="h-6 w-6 text-black dark:text-white menu-toggle" />
 			</div>
 		</div>
-		<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
+		<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto menu-enter navbarMenu">
 			<ul class="flex flex-col lg:flex-row lg:gap-3 ml-auto">
 				{
 					menuitems.map((item) => (
@@ -54,3 +54,46 @@ const menuitems = [
 		</MenuItems>
 	</Astronav>
 </header>
+<!-- <script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  const menuToggle = document.querySelector('.menu-toggle');
+	  const menu = document.querySelector('.navbarMenu');
+  
+	  menuToggle.addEventListener('click', function() {
+		const isOpen = menu.classList.contains('fade-in');
+  
+		if (isOpen) {
+		  menu.classList.remove('fade-in');
+		  menu.classList.add('fade-out');
+		  setTimeout(() => menu.classList.add('hidden'), 1000); // Ensure this matches the duration of your fade-out animation
+		} else {
+		  menu.classList.remove('hidden');
+		  menu.classList.remove('fade-out');
+		  menu.classList.add('fade-in');
+		}
+	  });
+	});
+  </script> -->
+
+  <style>
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+  </style>
