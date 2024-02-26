@@ -1,7 +1,7 @@
 <div class="theme-switch-wrapper md:flex md:items-center">
 	<label
 		data-testid="theme-switch"
-		class="theme-switch relative inline-block h-[34px] w-[60px]"
+		class="theme-switch relative inline-block h-[20px] w-[48px]"
 		for="checkbox"
 	>
 		<input type="checkbox" id="checkbox" class="hidden" />
@@ -26,6 +26,13 @@
 	input:checked + .slider:before {
 		transform: translateX(26px);
 	}
+	.theme-switch .slider:before {
+    bottom: 4px; /* Adjust if necessary to keep the circle centered vertically */
+    left: 5px; /* Adjust if necessary to keep the circle centered horizontally */
+    height: 12px; /* Smaller height */
+    width: 12px; /* Smaller width */
+}
+
 </style>
 
 <script>
@@ -52,6 +59,4 @@
 			switchTheme();
 		});
 	});
-
 </script>
-
