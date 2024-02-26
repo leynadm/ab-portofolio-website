@@ -2,145 +2,156 @@
 ---
 
 <section id="experience" class="container">
-<div id="timeline-content" class="items-center justify-center lg:mb-0 lg:h-screen lg:flex-row">
-	
-	<div class="mb-10 flex w-full flex-col items-center justify-center lg:mb-0 lg:w-1/2">
-		<h2 class="font-monospace text-2xl text-orange lg:text-4xl">My Experience</h2>
-		<span class="mb-6 ml-2 h-1 w-10 bg-orange"></span>
+	<div id="timeline-content" class="items-center justify-center lg:mb-0 lg:h-screen lg:flex-row">
+		<div class="mb-10 flex w-full flex-col items-center justify-center lg:mb-0 lg:w-1/2">
+			<h2 class="font-monospace text-2xl text-orange lg:text-4xl">Experience Timeline</h2>
+			<span class="mb-6 ml-2 h-1 w-10 bg-orange"></span>
+		</div>
+		<ul class="timeline mb-10 font-monospace text-4xl text-black dark:text-white lg:text-5xl">
+			<li class="event text-black dark:text-white" data-date="2023">
+				<h6>
+					UI/UX Specialization<h6>
+						<p>
+							I decided to dive deep into the world of UI/UX design, mastering the art of crafting
+							interfaces that not only look beautiful but feel intuitively right. Passionate about
+							bridging the gap between user needs and digital experiences.
+						</p>
+					</h6>
+					<li class="event" data-date="2022">
+						<h6>Software Engineer</h6>
+						<p>
+							Embarked on a journey with React, Context, and Jest, creating front-end modules that
+							not only perform flawlessly but also stand the test of code quality. Thrived in
+							translating complex problems into elegant solutions.
+						</p>
+					</li>
+				</h6>
+				<li class="event" id="date" data-date="2021">
+					<h6>Front-end developer</h6>
+					<p></p>
+					<p>
+						With Angular as my canvas, I dedicated myself to a new front-end development journey —
+						my main focus was refactoring and maintaining code, always with an eye toward improving
+						performance and user engagement.
+					</p>
+				</li>
+
+				<li class="event" data-date="2020">
+					<h6>Solutions Analyst</h6>
+
+					<p>
+						Stepped into a role where I could lead by example, developing in ReactJS and guiding a
+						team of eager juniors. My days were filled with code reviews and sharing the wisdom of
+						clean, effective coding practices.
+					</p>
+				</li>
+			</li>
+		</ul>
 	</div>
-	<ul class="mb-10 font-monospace text-4xl text-black dark:text-white lg:text-5xl timeline">
-		<li class=" text-black dark:text-white event" data-date="2023">
-			<h6>I took a gap year</h6>
-		</li>
-		<li class="event" data-date="2022">
-			<h6>Software Engineer</h6>
-			<p>Development of front-end modules using React, Context and Jest</p>
-		</li>
-		<li class="event" id="date" data-date="2021">
-			<h6>Front-end developer</h6>
-			<p></p>
-			<p>Development of front-end modules in Angular, refactoring, and maintenance</p>
-		</li>
+	<style>
+		.container {
+			opacity: 0;
+			filter: blur(5px);
+			transform: translateY(25%);
+			transition: all 1s;
+		}
 
-		<li class="event" data-date="2020">
-			<h6>Solutions Analyst</h6>
+		.container.show {
+			opacity: 1;
+			filter: blur(0);
+			transform: translateX(0);
+		}
 
-			<p>
-				Development of front-end modules in ReactJS and code review and guidance to a junior team
-			</p>
-		</li>
-	</ul>
-</div>
+		p {
+			font-weight: 300;
+			font-family: 'Montserrat', sans-serif;
+		}
+		a {
+			color: #6c6d6d;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: block;
+			letter-spacing: 0.3em;
+			font-size: 0.6em;
+			font-weight: 300;
+
+			padding: 0.3rem 1rem;
+			margin: 1.9rem 0 0 0;
+			float: right;
+		}
+		a:hover {
+			color: white;
+			background: #eff4ff;
+			border-bottom: 0.35em solid black;
+		}
+
+		h6 {
+			font-weight: bold;
+		}
+		#timeline-content {
+			margin-top: 50px;
+			text-align: center;
+		}
+		.timeline {
+			border-left: 4px solid rgb(94, 101, 116);
+			border-bottom-right-radius: 4px;
+			border-top-right-radius: 4px;
+			margin: 50px auto;
+			letter-spacing: 0.5px;
+			position: relative;
+			line-height: 1.4em;
+			font-size: 1.03em;
+			padding-left: 50px;
+			list-style: none;
+			text-align: left;
+			font-weight: 100;
+			max-width: 80%;
+		}
+		.timeline h1 {
+			letter-spacing: 1.5px;
+			font-weight: 100;
+			font-size: 1.4em;
+		}
+		.timeline h2,
+		.timeline h3 {
+			letter-spacing: 1.5px;
+			font-weight: 400;
+			font-size: 1.4em;
+		}
+		.timeline .event {
+			padding-bottom: 25px;
+			margin-bottom: 50px;
+			position: relative;
+		}
+		.timeline .event:last-of-type {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border: none;
+		}
+		.timeline .event:before,
+		.timeline .event:after {
+			position: absolute;
+			display: block;
+			top: 0;
+		}
+		.timeline .event:before {
+			left: -185px;
+
+			content: attr(data-date);
+			text-align: right;
+			font-weight: 100;
+			font-size: 0.9em;
+			min-width: 120px;
+		}
+		.timeline .event:after {
+			box-shadow: 0 0 0 4px #ffffff;
+			left: -57.85px;
+			background: #313534;
+			border-radius: 50%;
+			height: 11px;
+			width: 11px;
+			content: '';
+			top: 5px;
+		}
+	</style>
 </section>
-<style>
-
-.container {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(25%);
-    transition: all 1s;
-  }
-
-  .container.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-  }
-
-	p {
-		font-weight: 300;
-	}
-	a {
-		color: #6c6d6d;
-		text-decoration: none;
-		text-transform: uppercase;
-		display: block;
-		letter-spacing: 0.3em;
-		font-size: 0.6em;
-		font-weight: 300;
-
-		padding: 0.3rem 1rem;
-		margin: 1.9rem 0 0 0;
-		float: right;
-	}
-	a:hover {
-		color: white;
-		background: #eff4ff;
-		border-bottom: 0.35em solid black;
-	}
-
-	h6 {
-		font-family: 'Saira', sans-serif;
-		font-weight:bold;
-	}
-	#timeline-content {
-		margin-top: 50px;
-		text-align: center;
-	}
-	.timeline {
-		border-left: 4px solid rgb(94, 101, 116);
-		border-bottom-right-radius: 4px;
-		border-top-right-radius: 4px;
-			font-family: 'Chivo', sans-serif;
-		margin: 50px auto;
-		letter-spacing: 0.5px;
-		position: relative;
-		line-height: 1.4em;
-		font-size: 1.03em;
-		padding-left: 50px;
-		list-style: none;
-		text-align: left;
-		font-weight: 100;
-		max-width: 80%;
-	}
-	.timeline h1 {
-		font-family: 'Saira', sans-serif;
-		letter-spacing: 1.5px;
-		font-weight: 100;
-		font-size: 1.4em;
-	}
-	.timeline h2,
-	.timeline h3 {
-		font-family: 'Saira', sans-serif;
-		letter-spacing: 1.5px;
-		font-weight: 400;
-		font-size: 1.4em;
-	}
-	.timeline .event {
-
-		padding-bottom: 25px;
-		margin-bottom: 50px;
-		position: relative;
-	}
-	.timeline .event:last-of-type {
-		padding-bottom: 0;
-		margin-bottom: 0;
-		border: none;
-	}
-	.timeline .event:before,
-	.timeline .event:after {
-		position: absolute;
-		display: block;
-		top: 0;
-	}
-	.timeline .event:before {
-		left: -185px;
-
-		content: attr(data-date);
-		text-align: right;
-		font-weight: 100;
-		font-size: 0.9em;
-		min-width: 120px;
-		font-family: 'Saira', sans-serif;
-	}
-	.timeline .event:after {
-		box-shadow: 0 0 0 4px #ffffff;
-		left: -57.85px;
-		background: #313534;
-		border-radius: 50%;
-		height: 11px;
-		width: 11px;
-		content: '';
-		top: 5px;
-	}
-</style>

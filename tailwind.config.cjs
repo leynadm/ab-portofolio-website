@@ -13,15 +13,17 @@ module.exports = {
 			xl: '1280px',
 		},
 		colors: {
-			black: '#000',
-			white: '#fff',
-			orange: '#E06330',
+			black: '#222222',
+			white: '#F9F7F3',
+			orange: '#FBB13C',
+			'custom-light': '#F9F7F3',
+			'custom-dark': '#222222',
 		},
 		fontFamily: {
 			// Headings
-			sans: ['Inter', 'sans-serif'],
+			sans: ['Montserrat', 'sans-serif'],
 			// Base text
-			monospace: ['Inconsolata', 'monospace'],
+			monospace: ['Playfair Display', 'monospace'],
 		},
 		fontSize: {
 			xs: '.75rem',
