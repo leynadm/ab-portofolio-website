@@ -23,17 +23,17 @@ const menuitems = [
 ];
 ---
 
-<header data-testId="header" class="my-5  flex flex-col items-center justify-between lg:flex-row ">
+<header data-testId="header" class="flex w-full flex-col items-center justify-between lg:flex-row">
 	<Astronav>
-		<div class="flex w-full items-center justify-between lg:w-auto " >
+		<div class="flex w-full items-center justify-between lg:w-auto">
 			<!-- 			<Button size={'sm'} name="Download CV">Download CV</Button>
  -->
-			<div class="block lg:hidden ml-auto">
-				<MenuIcon class="h-6 w-6 text-black dark:text-white" />
+			<div class="ml-auto block lg:hidden">
+				<MenuIcon class="mr-5 mt-5 h-6 w-6 text-black dark:text-white" />
 			</div>
 		</div>
-		<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
-			<ul class="flex flex-col lg:flex-row lg:gap-3 ml-auto">
+		<MenuItems class="menu-items mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
+			<ul class="gradient-bg ml-auto flex flex-col lg:flex-row lg:gap-3">
 				{
 					menuitems.map((item) => (
 						<>
@@ -41,7 +41,7 @@ const menuitems = [
 								<a
 									aria-label="navigation link"
 									href={item.path}
-									class="flex py-3 text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3 justify-around font-bold font-mono"
+									class="font-mono flex justify-around py-3 font-bold text-white hover:text-orange dark:text-white dark:hover:text-orange lg:px-3"
 								>
 									{item.title}
 								</a>
@@ -55,25 +55,26 @@ const menuitems = [
 	</Astronav>
 </header>
 
-  <style>
+<style>
+	.gradient-bg {
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 1%, rgba(0, 0, 0, 1) 100%);
+	}
 
-.navbarMenu {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  transform: translateY(-100%); /* Start hidden above */
-  opacity: 0; /* Start transparent */
-  display: block; /* Ensure it's always block but can be invisible */
+	/* Hide the gradient on large screens */
+	@media (min-width: 1024px) {
+		.gradient-bg {
+			background-image: none;
+		}
+	}
+
+	.menu-items {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
 }
 
-/* Control visibility with classes */
-.navbarMenu.show {
-  transform: translateY(0); /* Slide down */
-  opacity: 1; /* Fade to visible */
+/* State when the menu is shown */
+.menu-items.open {
+  max-height: 500px; /* Adjust based on the total height of your menu items */
 }
-
-.navbarMenu.hide {
-  transform: translateY(-100%); /* Slide up */
-  opacity: 0; /* Fade to invisible */
-  pointer-events: none; /* Prevent interaction when hidden */
-}
-
-  </style>
+</style>

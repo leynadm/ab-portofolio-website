@@ -23,6 +23,10 @@ import Button from '@components/ui/Button.astro';
 			</Button>
 		</div>
 	</div>
+	<video playsinline autoplay muted loop poster="cake.jpg">
+		<source src="https://firebasestorage.googleapis.com/v0/b/matei-daniel-website.appspot.com/o/adriana-biarnes-website%2Fvideo-background-4.mp4?alt=media&token=9e100c82-69a4-4507-bddc-1e4ffcf333e4" type="video/mp4">
+		Your browser does not support the video tag.
+	  </video>
 </section>
 <div class="bg-light-mode background dark:hidden"></div>
 <!-- Shown in light mode -->
@@ -30,14 +34,24 @@ import Button from '@components/ui/Button.astro';
 <!-- Shown in dark mode -->
 
 <style>
+
+video{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;	
+	}
 	/* Custom CSS for light mode background */
-	.bg-light-mode {
+/* 	.bg-light-mode {
 		background-image: url('../assets/images/background-day.webp');
 	}
 	/* Custom CSS for dark mode background */
 	.bg-dark-mode {
 		background-image: url('../assets/images/background-night.webp');
-	}
+	} */
 	/* Common styles for both backgrounds */
 	.background {
 		position: absolute;
