@@ -23,7 +23,7 @@ module.exports = {
 			// Headings
 			sans: ['Montserrat', 'sans-serif'],
 			// Base text
-			monospace: ['Playfair Display', 'monospace'],
+			monospace: ['Montserrat', 'monospace'],
 		},
 		fontSize: {
 			xs: '.75rem',

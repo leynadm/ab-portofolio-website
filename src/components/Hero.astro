@@ -16,6 +16,9 @@ import Button from '@components/ui/Button.astro';
 			<h2 class="mb-10 font-monospace text-3xl text-white dark:text-white lg:text-5xl" rounded-md>
 				UI/UX designer
 			</h2>
+			<h3 class="mb-10 font-monospace  text-white dark:text-white lg:text-5xl" rounded-md>
+				My natural curiosity has drawn me to Product Design, where I can actively contribute to positive transformations. I'm eager to be part of projects that resonate with my values and allow me to make a meaningful impact.
+			</h3>
 		</div>
 		<div class="see-more">
 			<Button size={'lg'} class={'flex'} name="learn more">
@@ -85,5 +88,9 @@ video{
     animation: fadeIn 1s ease-out 1s forwards; /* Starts after h1 animation */
 }
 
+.typewriter h3{
+    opacity: 0; /* Start with h2 hidden */
+    animation: fadeIn 1s ease-out 1s forwards; /* Starts after h1 animation */
+}
 
 </style>
