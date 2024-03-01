@@ -4,14 +4,21 @@
 <section
 	data-testid="about"
 	id="about"
-	class="container mb-10 flex flex-col items-center justify-center lg:mb-0 lg:h-screen lg:flex-row"
+	class="px-5 container mb-10 flex flex-col items-center justify-center lg:mb-0 lg:h-screen lg:flex-row"
 >
-	<div class="mb-10 flex w-full flex-col items-center justify-center lg:mb-0 lg:w-1/2">
+	<div class="mb-2 flex w-full flex-col items-center justify-center lg:mb-0 lg:w-1/2">
 		<h2 class="font-monospace text-2xl text-orange lg:text-4xl">About me</h2>
 		<span class="mb-6 ml-2 h-1 w-10 bg-orange"></span>
 	</div>
 
+
 	<div class="flex w-full flex-col gap-4 text-justify text-black dark:text-white lg:w-1/2">
+		<div class="image-wrapper">
+		<img
+		src="https://firebasestorage.googleapis.com/v0/b/matei-daniel-website.appspot.com/o/adriana-biarnes-website%2Fadriana-biarnes-photo.png?alt=media&token=11213dbe-8dcf-401f-8a4f-0afe27cca469"
+		alt=""
+		style={{maxWidth:"400px"}}
+		/></div>
 		<p class="mb-2">
 			Being curious by nature, I have found in Product Design a place that invites me to want to help positive transformation happen. This is why it is important to me to participate in thrilling projects, where I can make things brighter through my hands-on contribution, and where these projects are aligned with my values. 
 		</p>
@@ -38,4 +45,10 @@
     transform: translateX(0);
   }
 
+.image-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
 </style>

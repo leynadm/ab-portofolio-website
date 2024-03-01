@@ -57,7 +57,7 @@ const menuitems = [
 
 <style>
 	.gradient-bg {
-		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 1%, rgba(0, 0, 0, 1) 100%);
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 100%);
 	}
 
 	/* Hide the gradient on large screens */
@@ -68,13 +68,13 @@ const menuitems = [
 	}
 
 	.menu-items {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.5s ease-in-out;
-}
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.5s ease-in-out;
+	}
 
-/* State when the menu is shown */
-.menu-items.open {
-  max-height: 500px; /* Adjust based on the total height of your menu items */
-}
+	/* State when the menu is shown */
+	.menu-items.open {
+		max-height: 500px; /* Adjust based on the total height of your menu items */
+	}
 </style>
