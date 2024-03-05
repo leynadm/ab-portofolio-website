@@ -9,14 +9,14 @@ import Button from '@components/ui/Button.astro';
 	<div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
 		<div class="typewriter">
 			<h1
-				class="mb-10 bg-black p-2 font-monospace text-3xl text-custom-white dark:bg-white dark:text-black lg:text-5xl"
+				class="mb-10 bg-black p-2 font-monospace text-3xl text-custom-white dark:bg-black dark:text-white lg:text-5xl"
 			>
 				Adriana <span class="text-orange">Biarnes</span>
 			</h1>
-			<h2 class="mb-10 font-monospace text-3xl text-white dark:text-white lg:text-5xl" rounded-md>
+			<h2 class="mb-10 font-monospace text-3xl text-black lg:text-5xl" rounded-md>
 				UI/UX designer
 			</h2>
-			<h3 class="mb-10 font-monospace  text-white dark:text-white" rounded-md>
+			<h3 class="mb-10 font-monospace  text-black" rounded-md>
 				UI/UX designs based on creativity and lateral thinking, and of course always user-centered. 
 			</h3>
 		</div>
@@ -38,23 +38,15 @@ import Button from '@components/ui/Button.astro';
 
 <style>
 
-video{
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		height: 100%;
-		width: 100%;
-		object-fit: cover;	
-	}
+
 	/* Custom CSS for light mode background */
  	.bg-light-mode {
-		background-image: url('../assets/images/background-day.webp');
+		background-image: url('../assets/images/adriana-bg.webp');
 		object-fit: cover;
 	}
 	/* Custom CSS for dark mode background */
 	.bg-dark-mode {
-		background-image: url('../assets/images/background-night.webp');
+		background-image: url('../assets/images/adriana-bg.webp');
 		object-fit: cover;
 	} 
 	/* Common styles for both backgrounds */

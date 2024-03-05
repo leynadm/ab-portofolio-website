@@ -1,7 +1,7 @@
 ---
 inProgress: false
 title: Procrastibreak App
-description: Developed an innovative app from the ground up, designed to combat procrastination by emphasizing emotional well-being over traditional productivity metrics. Our approach encourages users to feel better, thereby naturally improving their efficiency and focus.
+description: Developed an innovative app from the ground up, designed to combat procrastination by emphasizing emotional well-being over traditional productivity metrics. We took an innovative approach of encouraging users to feel better first, thereby naturally improving their efficiency and focus.
 img_alt: project image alt text
 link: https://medium.com/@adrianabiarnes/case-study-the-wellness-app-f263dd393cd8
 tags: ['UX Research', 'Concept Testing', 'Prototyping', UX Writing]
